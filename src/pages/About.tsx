@@ -1,0 +1,1 @@
+export default function About(){return (<div className="min-h-screen p-8"><h1 className="text-3xl font-bold mb-4">About Planto</h1><p>Planto helps you identify plants instantly and offers care guides trusted by thousands of users worldwide.</p></div>)}

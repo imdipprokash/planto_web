@@ -1,0 +1,1 @@
+export default function Terms(){return (<div className="min-h-screen p-8"><h1 className="text-3xl font-bold mb-4">Terms of Service</h1><p>These are placeholder terms. Replace with your legal text.</p></div>)}

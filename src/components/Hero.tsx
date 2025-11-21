@@ -68,7 +68,7 @@ export function Hero() {
               <div>
                 <div className="text-sm text-gray-900">Catharanthus roseus</div>
                 <div className="text-xs text-gray-600">
-                  Madagascar periwinkle plant
+                  Madagascar periwinkle Plant
                 </div>
               </div>
             </div>
