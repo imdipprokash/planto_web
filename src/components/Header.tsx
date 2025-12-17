@@ -37,12 +37,7 @@ export function Header() {
           >
             Pricing
           </Link>
-          <Link
-            to="/blog"
-            className="text-gray-600 hover:text-gray-900 transition-colors"
-          >
-            Blog
-          </Link>
+       
         </nav>
 
         <div className="flex items-center gap-3">
