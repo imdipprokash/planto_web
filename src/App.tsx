@@ -1,4 +1,4 @@
-import ScrollToTop from './components/ScrollToTop';
+import ScrollToTop from "./components/ScrollToTop";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
@@ -11,14 +11,15 @@ import { AboutPage } from "./pages/AboutPage";
 import { BlogPage } from "./pages/BlogPage";
 import { CareersPage } from "./pages/CareersPage";
 import { ContactPage } from "./pages/ContactPage";
-import { PrivacyPage } from "./pages/PrivacyPage";
+import PrivacyPage from "./pages/PrivacyPage";
 import { TermsPage } from "./pages/TermsPage";
 import { CookiePage } from "./pages/CookiePage";
 import { LicensesPage } from "./pages/LicensesPage";
 
 export default function App() {
   return (
-    <Router>\n  <ScrollToTop />
+    <Router>
+      \n <ScrollToTop />
       <div className="min-h-screen bg-white">
         <Header />
         <Routes>
