@@ -45,7 +45,7 @@ export default function PrivacyPage() {
         </section>
 
         {/* Cards Grid */}
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
+        <div className="grid md:grid-cols-1 gap-6 mb-8">
           {/* Google Authentication */}
           <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg hover:border-blue-100 transition-all duration-300 group">
             <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-blue-500/20 group-hover:scale-110 transition-transform">
@@ -269,7 +269,7 @@ export default function PrivacyPage() {
         </div>
 
         {/* Contact Footer */}
-        <footer className="text-center py-12 border-t border-slate-200">
+        <footer className="text-center  border-t border-slate-200 py-16">
           <h3 className="text-lg font-bold text-slate-900 mb-2">
             Questions or Concerns?
           </h3>
