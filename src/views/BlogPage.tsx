@@ -1,5 +1,7 @@
-import { Calendar, User, ArrowRight } from "lucide-react";
-import { Card } from "../components/ui/card";
+'use client';
+
+import { Calendar, User, ArrowRight, Newspaper, Clock } from "lucide-react";
+import { Reveal } from "../components/Reveal";
 
 export function BlogPage() {
   const featuredPost = {
@@ -81,138 +83,175 @@ export function BlogPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 to-emerald-50 py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h1 className="text-gray-900 mb-6">
+      <section className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
+        <div className="pointer-events-none absolute inset-0 -z-10">
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-50 via-white to-white" />
+          <div className="absolute inset-0 bg-grid [mask-image:radial-gradient(ellipse_at_top,black,transparent_70%)]" />
+          <div className="absolute -top-24 -left-20 h-96 w-96 bg-brand-300/40 blob-mask animate-blob" />
+          <div className="absolute -bottom-24 -right-16 h-80 w-80 bg-emerald-300/30 blob-mask animate-blob [animation-delay:-7s]" />
+        </div>
+        <div className="container-page">
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <span className="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-4 py-1.5 text-sm font-medium text-brand-700">
+              <Newspaper className="h-4 w-4" />
               Planto Blog
+            </span>
+            <h1 className="mt-5 text-4xl sm:text-5xl md:text-6xl">
+              Planto <span className="text-gradient">Blog</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="mt-5 text-lg text-muted-foreground">
               Expert tips, plant care guides, and the latest in plant technology to help you grow your green thumb.
             </p>
-          </div>
+          </Reveal>
 
           {/* Featured Post */}
-          <Card className="overflow-hidden hover:shadow-xl transition-shadow">
-            <div className="grid md:grid-cols-2">
-              <div className="aspect-video md:aspect-auto bg-gradient-to-br from-green-100 to-emerald-100" />
-              <div className="p-8 md:p-12 flex flex-col justify-center">
-                <div className="inline-block px-3 py-1 bg-green-600 text-white rounded-full text-sm w-fit mb-4">
-                  Featured
-                </div>
-                <h2 className="text-gray-900 mb-4">
-                  {featuredPost.title}
-                </h2>
-                <p className="text-gray-600 mb-6">
-                  {featuredPost.excerpt}
-                </p>
-                <div className="flex items-center gap-4 text-sm text-gray-500 mb-6">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
-                    <span>{featuredPost.date}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <User className="w-4 h-4" />
-                    <span>{featuredPost.author}</span>
+          <Reveal delay={120} className="mt-16">
+            <article className="group relative overflow-hidden rounded-[2.5rem] border border-border bg-card shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-float">
+              <div className="grid md:grid-cols-2">
+                <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-brand-500 to-emerald-500 md:aspect-auto">
+                  <div className="absolute -right-16 -top-16 h-56 w-56 bg-white/15 blob-mask animate-blob" />
+                  <div className="absolute inset-0 bg-dots opacity-30 [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Newspaper className="h-16 w-16 text-white/40" aria-label={featuredPost.image} />
                   </div>
                 </div>
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-2 text-green-600 hover:text-green-700"
-                >
-                  Read Article
-                  <ArrowRight className="w-4 h-4" />
-                </a>
+                <div className="flex flex-col justify-center p-8 md:p-12">
+                  <div className="mb-5 inline-flex w-fit items-center rounded-full bg-gradient-to-r from-brand-600 to-emerald-600 px-4 py-1.5 text-sm font-medium text-white">
+                    Featured
+                  </div>
+                  <h2 className="text-3xl sm:text-4xl">
+                    {featuredPost.title}
+                  </h2>
+                  <p className="mt-4 text-lg text-muted-foreground">
+                    {featuredPost.excerpt}
+                  </p>
+                  <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="h-4 w-4 text-brand-600" />
+                      <span>{featuredPost.date}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <User className="h-4 w-4 text-brand-600" />
+                      <span>{featuredPost.author}</span>
+                    </div>
+                  </div>
+                  <a
+                    href="#"
+                    className="group/link mt-8 inline-flex w-fit items-center gap-2 text-base font-semibold text-brand-700 transition-colors hover:text-brand-800"
+                  >
+                    Read Article
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover/link:translate-x-1" />
+                  </a>
+                </div>
               </div>
-            </div>
-          </Card>
+            </article>
+          </Reveal>
         </div>
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
+      <section className="relative py-24 md:py-32">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-white via-brand-50/40 to-white" />
+        <div className="container-page">
           {/* Categories Filter */}
-          <div className="flex flex-wrap gap-3 mb-12 justify-center">
+          <Reveal className="mb-16 flex flex-wrap justify-center gap-3">
             {categories.map((category, index) => (
               <button
                 key={index}
-                className={`px-4 py-2 rounded-full transition-colors ${
+                className={`rounded-full border px-5 py-2 text-sm font-medium transition-all ${
                   index === 0
-                    ? "bg-green-600 text-white"
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                    ? "border-brand-600 bg-brand-600 text-white shadow-soft"
+                    : "border-border bg-card text-foreground hover:-translate-y-0.5 hover:border-brand-200 hover:text-brand-700"
                 }`}
               >
                 {category}
               </button>
             ))}
-          </div>
+          </Reveal>
 
           {/* Posts Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {blogPosts.map((post, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow group">
-                <div className="aspect-video bg-gradient-to-br from-green-100 to-emerald-100" />
-                <div className="p-6">
-                  <div className="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm mb-4">
-                    {post.category}
+              <Reveal key={index} delay={(index % 3) * 90}>
+                <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-200 hover:shadow-card">
+                  <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-brand-400 to-emerald-500">
+                    <div className="absolute -right-12 -top-12 h-40 w-40 bg-white/15 blob-mask transition-transform duration-500 group-hover:scale-110" />
+                    <div className="absolute inset-0 bg-dots opacity-25 [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]" />
+                    <span className="absolute left-4 top-4 inline-flex items-center rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-brand-700 shadow-soft backdrop-blur">
+                      {post.category}
+                    </span>
                   </div>
-                  <h3 className="text-gray-900 mb-3 group-hover:text-green-600 transition-colors">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    {post.excerpt}
-                  </p>
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                    <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4" />
-                      <span>{post.date}</span>
+                  <div className="flex flex-1 flex-col p-7">
+                    <h3 className="text-xl text-foreground transition-colors group-hover:text-brand-700">
+                      {post.title}
+                    </h3>
+                    <p className="mt-3 flex-1 text-muted-foreground">
+                      {post.excerpt}
+                    </p>
+                    <div className="mt-6 flex items-center justify-between border-t border-border pt-5 text-sm text-muted-foreground">
+                      <div className="flex items-center gap-2">
+                        <Calendar className="h-4 w-4 text-brand-600" />
+                        <span>{post.date}</span>
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                        <Clock className="h-4 w-4" />
+                        <span>{post.readTime}</span>
+                      </div>
                     </div>
-                    <span>{post.readTime}</span>
+                    <a
+                      href="#"
+                      className="group/link mt-5 inline-flex w-fit items-center gap-2 font-semibold text-brand-700 transition-colors hover:text-brand-800"
+                    >
+                      Read More
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover/link:translate-x-1" />
+                    </a>
                   </div>
-                  <a
-                    href="#"
-                    className="inline-flex items-center gap-2 text-green-600 hover:text-green-700"
-                  >
-                    Read More
-                    <ArrowRight className="w-4 h-4" />
-                  </a>
-                </div>
-              </Card>
+                </article>
+              </Reveal>
             ))}
           </div>
 
           {/* Load More */}
-          <div className="text-center mt-12">
-            <button className="bg-gray-100 hover:bg-gray-200 px-8 py-4 rounded-lg text-gray-900 transition-colors">
+          <Reveal className="mt-16 text-center">
+            <button className="inline-flex items-center justify-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-8 py-4 text-base font-semibold text-brand-700 transition-all hover:-translate-y-0.5 hover:bg-brand-100">
               Load More Articles
             </button>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* Newsletter Section */}
-      <section className="bg-gray-900 text-white py-20 px-4">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="mb-6">
-            Get Plant Care Tips in Your Inbox
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Subscribe to our newsletter for weekly plant care tips, guides, and updates.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-grow px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-600"
-            />
-            <button className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg text-white transition-colors whitespace-nowrap">
-              Subscribe
-            </button>
-          </div>
-          <p className="text-sm text-gray-400 mt-4">
-            We respect your privacy. Unsubscribe at any time.
-          </p>
+      <section className="relative py-24 md:py-32">
+        <div className="container-page">
+          <Reveal>
+            <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-brand-700 via-brand-600 to-emerald-600 text-white shadow-float">
+              <div className="absolute -left-24 -top-24 h-80 w-80 bg-white/10 blob-mask animate-blob" />
+              <div className="absolute -bottom-28 right-10 h-72 w-72 bg-emerald-300/20 blob-mask animate-blob [animation-delay:-7s]" />
+              <div className="absolute inset-0 bg-dots opacity-30 [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]" />
+
+              <div className="relative mx-auto max-w-3xl px-8 py-16 text-center sm:px-12 sm:py-20">
+                <h2 className="text-4xl text-white sm:text-5xl">
+                  Get Plant Care Tips in Your Inbox
+                </h2>
+                <p className="mt-6 text-lg text-white/85">
+                  Subscribe to our newsletter for weekly plant care tips, guides, and updates.
+                </p>
+                <div className="mx-auto mt-10 flex max-w-md flex-col gap-4 sm:flex-row">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="flex-grow rounded-full border border-white/30 bg-white/95 px-5 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-white"
+                  />
+                  <button className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-white px-7 py-3 text-base font-semibold text-brand-700 shadow-float transition-all hover:-translate-y-0.5 hover:bg-brand-50">
+                    Subscribe
+                  </button>
+                </div>
+                <p className="mt-5 text-sm text-white/70">
+                  We respect your privacy. Unsubscribe at any time.
+                </p>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
     </div>

@@ -1,54 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap");
+@import "tailwindcss";
+
 @custom-variant dark (&:is(.dark *));
 
+/* ------------------------------------------------------------------ *
+ * Design tokens
+ * ------------------------------------------------------------------ */
 :root {
   --font-size: 16px;
+
+  /* Brand — botanical green scale */
+  --brand-50: oklch(0.982 0.018 155.826);
+  --brand-100: oklch(0.962 0.044 156.743);
+  --brand-200: oklch(0.925 0.084 155.995);
+  --brand-300: oklch(0.871 0.15 154.449);
+  --brand-400: oklch(0.792 0.209 151.711);
+  --brand-500: oklch(0.723 0.219 149.579);
+  --brand-600: oklch(0.627 0.194 149.214);
+  --brand-700: oklch(0.527 0.154 150.069);
+  --brand-800: oklch(0.448 0.119 151.328);
+  --brand-900: oklch(0.393 0.095 152.535);
+
   --background: #ffffff;
-  --foreground: oklch(0.145 0 0);
+  --foreground: oklch(0.21 0.006 285.885);
   --card: #ffffff;
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground: oklch(0.21 0.006 285.885);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: #030213;
+  --popover-foreground: oklch(0.21 0.006 285.885);
+  --primary: var(--brand-600);
   --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.95 0.0058 264.53);
-  --secondary-foreground: #030213;
-  --muted: #ececf0;
-  --muted-foreground: #717182;
-  --accent: #e9ebef;
-  --accent-foreground: #030213;
+  --secondary: oklch(0.967 0.012 152);
+  --secondary-foreground: var(--brand-800);
+  --muted: oklch(0.967 0.001 286.375);
+  --muted-foreground: oklch(0.552 0.014 285.938);
+  --accent: oklch(0.962 0.044 156.743);
+  --accent-foreground: var(--brand-800);
   --destructive: #d4183d;
   --destructive-foreground: #ffffff;
-  --border: rgba(0, 0, 0, 0.1);
+  --border: oklch(0.92 0.004 286.32);
   --input: transparent;
-  --input-background: #f3f3f5;
+  --input-background: oklch(0.967 0.001 286.375);
   --switch-background: #cbced4;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
+  --ring: var(--brand-500);
+  --chart-1: var(--brand-500);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.625rem;
+  --radius: 0.75rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: #030213;
+  --sidebar-primary: var(--brand-600);
   --sidebar-primary-foreground: oklch(0.985 0 0);
   --sidebar-accent: oklch(0.97 0 0);
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar-ring: var(--brand-500);
 }
 
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
+  --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
+  --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
+  --primary: var(--brand-500);
   --primary-foreground: oklch(0.205 0 0);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
@@ -60,25 +79,27 @@
   --destructive-foreground: oklch(0.637 0.237 25.331);
   --border: oklch(0.269 0 0);
   --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
-  --font-weight-medium: 500;
-  --font-weight-normal: 400;
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+  --ring: var(--brand-500);
 }
 
+/* ------------------------------------------------------------------ *
+ * Theme mapping — exposes tokens as Tailwind utilities
+ * ------------------------------------------------------------------ */
 @theme inline {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Sora", "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-50: var(--brand-50);
+  --color-brand-100: var(--brand-100);
+  --color-brand-200: var(--brand-200);
+  --color-brand-300: var(--brand-300);
+  --color-brand-400: var(--brand-400);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-brand-800: var(--brand-800);
+  --color-brand-900: var(--brand-900);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -109,6 +130,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 12px);
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -117,73 +139,188 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  --shadow-soft: 0 1px 2px rgba(16, 24, 40, 0.04), 0 4px 16px rgba(16, 24, 40, 0.06);
+  --shadow-card: 0 2px 8px rgba(16, 24, 40, 0.06), 0 12px 32px rgba(16, 24, 40, 0.08);
+  --shadow-float: 0 8px 24px rgba(16, 24, 40, 0.08), 0 24px 60px rgba(16, 24, 40, 0.12);
+  --shadow-brand: 0 10px 30px -8px oklch(0.627 0.194 149.214 / 0.45);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float 9s ease-in-out infinite;
+  --animate-blob: blob 18s ease-in-out infinite;
+  --animate-shimmer: shimmer 2.4s linear infinite;
+  --animate-gradient: gradient-pan 8s ease infinite;
+  --animate-marquee: marquee 32s linear infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-14px); }
+  }
+  @keyframes blob {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(24px, -36px) scale(1.08); }
+    66% { transform: translate(-20px, 18px) scale(0.94); }
+  }
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  @keyframes gradient-pan {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
 }
 
+/* ------------------------------------------------------------------ *
+ * Base
+ * ------------------------------------------------------------------ */
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
 
+  html {
+    font-size: var(--font-size);
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--brand-200);
+    color: var(--brand-900);
+  }
+
+  /* Fallback typography when no explicit text-* utility is applied */
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 { font-size: var(--text-4xl); }
+    h2 { font-size: var(--text-3xl); }
+    h3 { font-size: var(--text-xl); }
+    h4 { font-size: var(--text-lg); }
+    p, label, input { font-size: var(--text-base); font-weight: var(--font-weight-normal); line-height: 1.6; }
+    button { font-size: var(--text-base); font-weight: var(--font-weight-medium); }
   }
 }
 
-/**
- * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
- */
-@layer base {
-  :where(:not(:has([class*=' text-']), :not(:has([class^='text-'])))) {
-    h1 {
-      font-size: var(--text-2xl);
-      font-weight: var(--font-weight-medium);
-      line-height: 1.5;
-    }
-
-    h2 {
-      font-size: var(--text-xl);
-      font-weight: var(--font-weight-medium);
-      line-height: 1.5;
-    }
-
-    h3 {
-      font-size: var(--text-lg);
-      font-weight: var(--font-weight-medium);
-      line-height: 1.5;
-    }
-
-    h4 {
-      font-size: var(--text-base);
-      font-weight: var(--font-weight-medium);
-      line-height: 1.5;
-    }
-
-    p {
-      font-size: var(--text-base);
-      font-weight: var(--font-weight-normal);
-      line-height: 1.5;
-    }
-
-    label {
-      font-size: var(--text-base);
-      font-weight: var(--font-weight-medium);
-      line-height: 1.5;
-    }
-
-    button {
-      font-size: var(--text-base);
-      font-weight: var(--font-weight-medium);
-      line-height: 1.5;
-    }
-
-    input {
-      font-size: var(--text-base);
-      font-weight: var(--font-weight-normal);
-      line-height: 1.5;
-    }
-  }
+/* ------------------------------------------------------------------ *
+ * Utilities — gradients, glass, depth, decoration
+ * ------------------------------------------------------------------ */
+@utility container-page {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  max-width: 80rem;
 }
 
-html {
-  font-size: var(--font-size);
+@utility text-gradient {
+  background-image: linear-gradient(
+    135deg,
+    var(--brand-700) 0%,
+    var(--brand-500) 45%,
+    oklch(0.7 0.17 175) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, oklch(0.21 0.006 285 / 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, oklch(0.21 0.006 285 / 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+@utility bg-dots {
+  background-image: radial-gradient(oklch(0.21 0.006 285 / 0.07) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+@utility glass {
+  background: color-mix(in oklab, white 70%, transparent);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid color-mix(in oklab, white 60%, transparent);
+}
+
+@utility glass-card {
+  background: color-mix(in oklab, white 78%, transparent);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border: 1px solid oklch(1 0 0 / 0.6);
+  box-shadow: var(--shadow-card);
+}
+
+@utility shadow-soft { box-shadow: var(--shadow-soft); }
+@utility shadow-card { box-shadow: var(--shadow-card); }
+@utility shadow-float { box-shadow: var(--shadow-float); }
+@utility shadow-brand { box-shadow: var(--shadow-brand); }
+
+/* iOS/Figma-style continuous corner smoothing (superellipse squircle) */
+@utility squircle {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Cpath%20d='M0%2050C0%2012.5%2012.5%200%2050%200C87.5%200%20100%2012.5%20100%2050C100%2087.5%2087.5%20100%2050%20100C12.5%20100%200%2087.5%200%2050Z'%20fill='%23000'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Cpath%20d='M0%2050C0%2012.5%2012.5%200%2050%200C87.5%200%20100%2012.5%20100%2050C100%2087.5%2087.5%20100%2050%20100C12.5%20100%200%2087.5%200%2050Z'%20fill='%23000'/%3E%3C/svg%3E");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+/* Animated gradient blobs used for ambient backgrounds */
+@utility blob-mask {
+  border-radius: 42% 58% 63% 37% / 41% 44% 56% 59%;
+  filter: blur(40px);
+}
+
+/* ------------------------------------------------------------------ *
+ * Scroll reveal — paired with the <Reveal> client component
+ * ------------------------------------------------------------------ */
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+    [class*="animate-"] {
+      animation: none !important;
+    }
+    html { scroll-behavior: auto; }
+  }
 }

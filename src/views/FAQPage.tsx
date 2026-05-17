@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, HelpCircle, LifeBuoy, Download } from "lucide-react";
+import { Reveal } from "../components/Reveal";
 
 export function FAQPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -12,7 +13,7 @@ export function FAQPage() {
       questions: [
         {
           question: "What is Planto?",
-          answer: "Planto is an AI-powered plant identification app that helps you identify plants, learn about their care requirements, and manage your plant collection. With over 1,500 active users and 500+ successful identifications, we're helping plant lovers worldwide."
+          answer: "Planto is an AI-powered plant identification app that helps you identify plants, learn about their care requirements, and manage your plant collection. With over 2999 active users and 500+ successful identifications, we're helping plant lovers worldwide."
         },
         {
           question: "How accurate is the plant identification?",
@@ -117,90 +118,142 @@ export function FAQPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 to-emerald-50 py-20 px-4">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-gray-900 mb-6">
-            Frequently Asked Questions
-          </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Find answers to common questions about Planto. Can't find what you're looking for? Contact our support team.
-          </p>
+      <section className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
+        <div className="pointer-events-none absolute inset-0 -z-10">
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-50 via-white to-white" />
+          <div className="absolute inset-0 bg-grid [mask-image:radial-gradient(ellipse_at_top,black,transparent_70%)]" />
+          <div className="absolute -top-24 -left-20 h-96 w-96 bg-brand-300/40 blob-mask animate-blob" />
+          <div className="absolute -bottom-24 -right-16 h-80 w-80 bg-emerald-300/30 blob-mask animate-blob [animation-delay:-7s]" />
+        </div>
+        <div className="container-page">
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <span className="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-4 py-1.5 text-sm font-medium text-brand-700">
+              <HelpCircle className="h-4 w-4" />
+              Help Center
+            </span>
+            <h1 className="mt-5 text-4xl sm:text-5xl md:text-6xl">
+              Frequently Asked{" "}
+              <span className="text-gradient">Questions</span>
+            </h1>
+            <p className="mt-5 text-lg text-muted-foreground">
+              Find answers to common questions about Planto. Can't find what you're looking for? Contact our support team.
+            </p>
+          </Reveal>
         </div>
       </section>
 
       {/* FAQ Content */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-4xl">
-          {faqCategories.map((category, catIndex) => (
-            <div key={catIndex} className="mb-16">
-              <h2 className="text-gray-900 mb-8 pb-4 border-b-2 border-green-600">
-                {category.category}
-              </h2>
-              <div className="space-y-4">
-                {category.questions.map((faq, qIndex) => {
-                  const globalIndex = faqCategories
-                    .slice(0, catIndex)
-                    .reduce((acc, cat) => acc + cat.questions.length, 0) + qIndex;
-                  const isOpen = openIndex === globalIndex;
+      <section className="relative py-24 md:py-32">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-white via-brand-50/40 to-white" />
+        <div className="container-page">
+          <div className="mx-auto max-w-3xl">
+            {faqCategories.map((category, catIndex) => (
+              <div key={catIndex} className="mb-16 last:mb-0">
+                <Reveal className="mb-8">
+                  <div className="flex items-center gap-4">
+                    <h2 className="text-3xl sm:text-4xl">
+                      {category.category}
+                    </h2>
+                    <span className="h-px flex-1 bg-gradient-to-r from-brand-200 to-transparent" />
+                  </div>
+                </Reveal>
+                <div className="space-y-4">
+                  {category.questions.map((faq, qIndex) => {
+                    const globalIndex = faqCategories
+                      .slice(0, catIndex)
+                      .reduce((acc, cat) => acc + cat.questions.length, 0) + qIndex;
+                    const isOpen = openIndex === globalIndex;
 
-                  return (
-                    <div
-                      key={qIndex}
-                      className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition-shadow"
-                    >
-                      <button
-                        onClick={() => setOpenIndex(isOpen ? null : globalIndex)}
-                        className="w-full flex items-center justify-between p-6 text-left"
-                      >
-                        <h3 className="text-gray-900 pr-8">
-                          {faq.question}
-                        </h3>
-                        <ChevronDown
-                          className={`w-5 h-5 text-green-600 flex-shrink-0 transition-transform ${
-                            isOpen ? "rotate-180" : ""
+                    return (
+                      <Reveal key={qIndex} delay={(qIndex % 4) * 70}>
+                        <div
+                          className={`group overflow-hidden rounded-2xl border bg-card transition-all duration-300 ${
+                            isOpen
+                              ? "border-brand-300 shadow-card"
+                              : "border-border shadow-soft hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-card"
                           }`}
-                        />
-                      </button>
-                      {isOpen && (
-                        <div className="px-6 pb-6">
-                          <p className="text-gray-600 leading-relaxed">
-                            {faq.answer}
-                          </p>
+                        >
+                          <button
+                            onClick={() => setOpenIndex(isOpen ? null : globalIndex)}
+                            className="flex w-full items-center justify-between gap-6 p-6 text-left"
+                          >
+                            <h3 className="text-lg text-foreground transition-colors group-hover:text-brand-700">
+                              {faq.question}
+                            </h3>
+                            <span
+                              className={`flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
+                                isOpen
+                                  ? "bg-brand-600 text-white"
+                                  : "bg-brand-50 text-brand-600 group-hover:bg-brand-100"
+                              }`}
+                            >
+                              <ChevronDown
+                                className={`h-5 w-5 transition-transform duration-300 ${
+                                  isOpen ? "rotate-180" : ""
+                                }`}
+                              />
+                            </span>
+                          </button>
+                          <div
+                            className={`grid transition-all duration-300 ease-out ${
+                              isOpen
+                                ? "grid-rows-[1fr] opacity-100"
+                                : "grid-rows-[0fr] opacity-0"
+                            }`}
+                          >
+                            <div className="overflow-hidden">
+                              <p className="px-6 pb-6 leading-relaxed text-muted-foreground">
+                                {faq.answer}
+                              </p>
+                            </div>
+                          </div>
                         </div>
-                      )}
-                    </div>
-                  );
-                })}
+                      </Reveal>
+                    );
+                  })}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Contact CTA */}
-      <section className="bg-gray-50 py-20 px-4">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-gray-900 mb-6">
-            Still Have Questions?
-          </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Our support team is here to help you get the most out of Planto
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="/contact"
-              className="bg-green-600 hover:bg-green-700 px-8 py-4 rounded-lg text-white transition-colors"
-            >
-              Contact Support
-            </a>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.plantgenius"
-              className="bg-gray-200 hover:bg-gray-300 px-8 py-4 rounded-lg text-gray-900 transition-colors"
-              target="_blank"
-            >
-              Download App
-            </a>
-          </div>
+      <section className="relative py-24 md:py-32">
+        <div className="container-page">
+          <Reveal>
+            <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-brand-700 via-brand-600 to-emerald-600 text-white shadow-float">
+              <div className="absolute -left-24 -top-24 h-80 w-80 bg-white/10 blob-mask animate-blob" />
+              <div className="absolute -bottom-28 right-10 h-72 w-72 bg-emerald-300/20 blob-mask animate-blob [animation-delay:-7s]" />
+              <div className="absolute inset-0 bg-dots opacity-30 [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]" />
+
+              <div className="relative mx-auto max-w-3xl px-8 py-16 text-center sm:px-12 sm:py-20">
+                <h2 className="text-4xl text-white sm:text-5xl">
+                  Still Have Questions?
+                </h2>
+                <p className="mt-6 text-lg text-white/85">
+                  Our support team is here to help you get the most out of Planto
+                </p>
+                <div className="mt-10 flex flex-wrap justify-center gap-4">
+                  <a
+                    href="/contact"
+                    className="group inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-base font-semibold text-brand-700 shadow-float transition-all hover:-translate-y-0.5 hover:bg-brand-50"
+                  >
+                    <LifeBuoy className="h-5 w-5 text-brand-600" />
+                    Contact Support
+                  </a>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.plantgenius"
+                    className="group inline-flex items-center justify-center gap-3 rounded-full border border-white/40 bg-white/10 px-8 py-4 text-base font-semibold text-white backdrop-blur transition-all hover:-translate-y-0.5 hover:bg-white/20"
+                    target="_blank"
+                  >
+                    <Download className="h-5 w-5" />
+                    Download App
+                  </a>
+                </div>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
     </div>

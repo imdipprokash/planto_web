@@ -1,3 +1,7 @@
+'use client';
+
+import { Reveal } from "../components/Reveal";
+
 export function LicensesPage() {
   const licenses = [
     {
@@ -69,45 +73,54 @@ export function LicensesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 to-emerald-50 py-20 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <h1 className="text-gray-900 mb-4">
-            Open Source Licenses & Attributions
-          </h1>
-          <p className="text-gray-600">
-            Planto is built with amazing open source software. We're grateful to the developers and contributors of these projects.
-          </p>
+      <section className="relative overflow-hidden pt-32 pb-16 md:pt-40 md:pb-20">
+        <div className="pointer-events-none absolute inset-0 -z-10">
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-50 via-white to-white" />
+          <div className="absolute inset-0 bg-grid [mask-image:radial-gradient(ellipse_at_top,black,transparent_70%)]" />
+        </div>
+        <div className="container-page max-w-3xl">
+          <Reveal>
+            <span className="inline-flex items-center rounded-full border border-brand-200 bg-brand-50 px-4 py-1.5 text-sm font-medium text-brand-700">
+              Legal
+            </span>
+            <h1 className="mt-5 text-4xl sm:text-5xl">
+              Open Source Licenses &amp; Attributions
+            </h1>
+            <p className="mt-4 text-muted-foreground">
+              Planto is built with amazing open source software. We're grateful to the developers and contributors of these projects.
+            </p>
+          </Reveal>
         </div>
       </section>
 
       {/* Content */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
+      <section className="pb-24 md:pb-32">
+        <div className="container-page max-w-3xl">
           {/* Software Licenses */}
           <div className="mb-16">
-            <h2 className="text-gray-900 mb-8">
+            <h2 className="text-2xl text-foreground mb-6">
               Open Source Software
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-2 gap-5">
               {licenses.map((license, index) => (
                 <div
                   key={index}
-                  className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow"
+                  className="rounded-2xl border border-border bg-card p-6 shadow-soft transition-shadow hover:shadow-card"
                 >
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-gray-900">
+                  <div className="flex items-start justify-between gap-3 mb-3">
+                    <h3 className="text-lg text-foreground">
                       {license.name}
                     </h3>
-                    <span className="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+                    <span className="shrink-0 rounded-full border border-border bg-brand-50 px-3 py-1 text-xs font-medium text-brand-700">
                       {license.version}
                     </span>
                   </div>
-                  <p className="text-gray-600 mb-3">
+                  <p className="text-foreground/70 leading-relaxed mb-4">
                     {license.description}
                   </p>
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-500">{license.author}</span>
-                    <span className="text-green-600">{license.license}</span>
+                    <span className="text-muted-foreground">{license.author}</span>
+                    <span className="font-medium text-brand-700">{license.license}</span>
                   </div>
                 </div>
               ))}
@@ -116,31 +129,31 @@ export function LicensesPage() {
 
           {/* Image Attributions */}
           <div className="mb-16">
-            <h2 className="text-gray-900 mb-8">
+            <h2 className="text-2xl text-foreground mb-6">
               Image Attributions
             </h2>
-            <div className="space-y-6">
+            <div className="space-y-5">
               {imageAttributions.map((attribution, index) => (
                 <div
                   key={index}
-                  className="bg-white border border-gray-200 rounded-xl p-6"
+                  className="rounded-2xl border border-border bg-card p-6 shadow-soft"
                 >
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-gray-900">
+                  <div className="flex items-start justify-between gap-3 mb-3">
+                    <h3 className="text-lg text-foreground">
                       {attribution.source}
                     </h3>
-                    <span className="text-sm text-green-600">
+                    <span className="shrink-0 text-sm font-medium text-brand-700">
                       {attribution.license}
                     </span>
                   </div>
-                  <p className="text-gray-600 mb-3">
+                  <p className="text-foreground/70 leading-relaxed mb-3">
                     {attribution.description}
                   </p>
                   <a
                     href={attribution.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-green-600 hover:text-green-700 text-sm"
+                    className="text-sm font-medium text-brand-700 underline underline-offset-2"
                   >
                     View License →
                   </a>
@@ -151,15 +164,15 @@ export function LicensesPage() {
 
           {/* License Texts */}
           <div>
-            <h2 className="text-gray-900 mb-8">
+            <h2 className="text-2xl text-foreground mb-6">
               Common License Texts
             </h2>
-            
-            <div className="space-y-8">
+
+            <div className="space-y-6">
               {/* MIT License */}
-              <div className="bg-gray-50 rounded-xl p-8">
-                <h3 className="text-gray-900 mb-4">MIT License</h3>
-                <div className="text-sm text-gray-600 font-mono space-y-4">
+              <div className="rounded-2xl border border-border bg-brand-50/40 p-8">
+                <h3 className="text-xl text-foreground mb-4">MIT License</h3>
+                <div className="space-y-4 font-mono text-sm leading-relaxed text-foreground/70">
                   <p>
                     Permission is hereby granted, free of charge, to any person obtaining a copy
                     of this software and associated documentation files (the "Software"), to deal
@@ -185,9 +198,9 @@ export function LicensesPage() {
               </div>
 
               {/* Apache License 2.0 */}
-              <div className="bg-gray-50 rounded-xl p-8">
-                <h3 className="text-gray-900 mb-4">Apache License 2.0</h3>
-                <div className="text-sm text-gray-600 space-y-4">
+              <div className="rounded-2xl border border-border bg-brand-50/40 p-8">
+                <h3 className="text-xl text-foreground mb-4">Apache License 2.0</h3>
+                <div className="space-y-4 text-sm leading-relaxed text-foreground/70">
                   <p>
                     Licensed under the Apache License, Version 2.0 (the "License");
                     you may not use this file except in compliance with the License.
@@ -203,7 +216,7 @@ export function LicensesPage() {
                     href="https://www.apache.org/licenses/LICENSE-2.0"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-green-600 hover:text-green-700 inline-block mt-2"
+                    className="inline-block mt-2 font-medium text-brand-700 underline underline-offset-2"
                   >
                     View Full License →
                   </a>
@@ -211,9 +224,9 @@ export function LicensesPage() {
               </div>
 
               {/* ISC License */}
-              <div className="bg-gray-50 rounded-xl p-8">
-                <h3 className="text-gray-900 mb-4">ISC License</h3>
-                <div className="text-sm text-gray-600 font-mono space-y-4">
+              <div className="rounded-2xl border border-border bg-brand-50/40 p-8">
+                <h3 className="text-xl text-foreground mb-4">ISC License</h3>
+                <div className="space-y-4 font-mono text-sm leading-relaxed text-foreground/70">
                   <p>
                     Permission to use, copy, modify, and/or distribute this software for any
                     purpose with or without fee is hereby granted, provided that the above
@@ -234,16 +247,16 @@ export function LicensesPage() {
           </div>
 
           {/* Acknowledgments */}
-          <div className="mt-16 bg-green-50 rounded-xl p-8">
-            <h2 className="text-gray-900 mb-4">
+          <div className="mt-16 rounded-2xl border border-brand-200 bg-brand-50 p-8">
+            <h2 className="text-2xl text-foreground mb-4">
               Acknowledgments
             </h2>
-            <p className="text-gray-700 mb-4">
+            <p className="text-foreground/80 leading-relaxed mb-4">
               We extend our heartfelt thanks to the open source community. The software and resources
               listed above have been instrumental in building Planto, and we're grateful for the
               countless hours of work that contributors have put into these projects.
             </p>
-            <p className="text-gray-700">
+            <p className="text-foreground/80 leading-relaxed">
               If you believe we've missed any attribution or have questions about our use of
               open source software, please contact us at support@plantoapp.info
             </p>
