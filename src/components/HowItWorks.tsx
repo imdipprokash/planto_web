@@ -1,56 +1,47 @@
+'use client';
+
 import { Camera, Sparkles, BookOpen } from "lucide-react";
+import { Reveal } from "./Reveal";
+
+const STEPS = [
+  { icon: Camera, step: "01", title: "Take a Photo", description: "Snap a clear picture of any plant, flower, or leaf you want to identify." },
+  { icon: Sparkles, step: "02", title: "Get Instant Results", description: "Our AI analyzes the image and provides accurate identification within seconds." },
+  { icon: BookOpen, step: "03", title: "Learn & Care", description: "Access detailed care guides, tips, and add the plant to your personal collection." },
+];
 
 export function HowItWorks() {
-  const steps = [
-    {
-      icon: Camera,
-      step: "Step 1",
-      title: "Take a Photo",
-      description: "Snap a clear picture of any plant, flower, or leaf you want to identify."
-    },
-    {
-      icon: Sparkles,
-      step: "Step 2",
-      title: "Get Instant Results",
-      description: "Our AI analyzes the image and provides accurate identification within seconds."
-    },
-    {
-      icon: BookOpen,
-      step: "Step 3",
-      title: "Learn & Care",
-      description: "Access detailed care guides, tips, and add the plant to your personal collection."
-    }
-  ];
-
   return (
-    <section id="how-it-works" className="py-20 px-4 bg-gray-50">
-      <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl text-gray-900 mb-4">How It Works</h2>
-          <p className="text-xl text-gray-600">Identify any plant in three simple steps</p>
-        </div>
-        
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {steps.map((item, index) => (
-            <div key={index} className="relative">
-              <div className="bg-white rounded-2xl p-8 text-center h-full shadow-sm hover:shadow-md transition-shadow">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-green-100 rounded-2xl mb-6">
-                  <item.icon className="w-10 h-10 text-green-600" />
+    <section id="how-it-works" className="relative py-24 md:py-32">
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-white to-brand-50/60" />
+      <div className="container-page">
+        <Reveal className="mx-auto mb-16 max-w-2xl text-center">
+          <span className="inline-flex items-center rounded-full border border-brand-200 bg-brand-50 px-4 py-1.5 text-sm font-medium text-brand-700">
+            How It Works
+          </span>
+          <h2 className="mt-5 text-4xl sm:text-5xl">
+            Identify Any Plant in{" "}
+            <span className="text-gradient">Three Simple Steps</span>
+          </h2>
+        </Reveal>
+
+        <div className="relative mx-auto max-w-5xl">
+          <div className="absolute left-0 right-0 top-[4.5rem] hidden h-px bg-gradient-to-r from-transparent via-brand-300 to-transparent md:block" />
+          <div className="grid gap-8 md:grid-cols-3">
+            {STEPS.map((item, index) => (
+              <Reveal key={item.title} delay={index * 120}>
+                <div className="group relative h-full rounded-3xl border border-border bg-card p-8 text-center shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:shadow-card">
+                  <div className="relative mx-auto mb-6 inline-flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-500 to-emerald-500 text-white shadow-brand transition-transform duration-300 group-hover:scale-110">
+                    <item.icon className="h-9 w-9" />
+                    <span className="absolute -right-2 -top-2 flex h-8 w-8 items-center justify-center rounded-full border border-border bg-card text-sm font-bold text-brand-600 shadow-soft">
+                      {item.step}
+                    </span>
+                  </div>
+                  <h3 className="mb-3 text-xl">{item.title}</h3>
+                  <p className="text-muted-foreground">{item.description}</p>
                 </div>
-                <div className="text-sm text-green-600 mb-2">{item.step}</div>
-                <h3 className="text-xl text-gray-900 mb-3">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
-              </div>
-              
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                  <svg className="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              )}
-            </div>
-          ))}
+              </Reveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>
