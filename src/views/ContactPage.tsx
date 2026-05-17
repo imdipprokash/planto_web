@@ -1,3 +1,5 @@
+'use client';
+
 import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
 import { Card } from "../components/ui/card";
 import { Button } from "../components/ui/button";

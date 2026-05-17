@@ -5,7 +5,7 @@ import {
   Instagram,
   Youtube,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -13,7 +13,7 @@ export function Footer() {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
-            <Link to="/" className="flex items-center gap-2 mb-4">
+            <Link href="/" className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 bg-green-600 rounded-xl flex items-center justify-center">
                 <img
                   src="https://play-lh.googleusercontent.com/8Fpxd6sLTWy6saCYZXR-Hyl0I6t6gy6drPktH9n8tSIO1QP4PIW7Ji4QKqOg8vBF4jA=w480-h960-rw"
@@ -33,7 +33,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  to="/features"
+                  href="/features"
                   className="hover:text-white transition-colors"
                 >
                   Features
@@ -41,7 +41,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  to="/how-it-works"
+                  href="/how-it-works"
                   className="hover:text-white transition-colors"
                 >
                   How It Works
@@ -49,7 +49,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  to="/pricing"
+                  href="/pricing"
                   className="hover:text-white transition-colors"
                 >
                   Pricing
@@ -57,7 +57,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  to="/faq"
+                  href="/faq"
                   className="hover:text-white transition-colors"
                 >
                   FAQ
@@ -71,7 +71,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  to="/about"
+                  href="/about"
                   className="hover:text-white transition-colors"
                 >
                   About Us
@@ -80,7 +80,7 @@ export function Footer() {
               
               <li>
                 <Link
-                  to="/careers"
+                  href="/careers"
                   className="hover:text-white transition-colors"
                 >
                   Careers
@@ -88,7 +88,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className="hover:text-white transition-colors"
                 >
                   Contact
@@ -102,7 +102,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  to="/privacy"
+                  href="/privacy"
                   className="hover:text-white transition-colors"
                 >
                   Privacy Policy
@@ -110,7 +110,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  to="/terms"
+                  href="/terms"
                   className="hover:text-white transition-colors"
                 >
                   Terms of Service
@@ -118,7 +118,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  to="/cookies"
+                  href="/cookies"
                   className="hover:text-white transition-colors"
                 >
                   Cookie Policy
@@ -126,7 +126,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  to="/licenses"
+                  href="/licenses"
                   className="hover:text-white transition-colors"
                 >
                   Licenses
