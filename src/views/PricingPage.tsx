@@ -11,7 +11,7 @@ export function PricingPage() {
       period: "forever",
       description: "Perfect for casual plant enthusiasts",
       features: [
-        "3 plant identifications per day",
+        "5 plant identifications per day",
         "Plant ID information",
       ],
       notIncluded: [
@@ -25,7 +25,7 @@ export function PricingPage() {
     },
     {
       name: "Pro",
-      price: "$2.49",
+      price: "$4.99",
       period: "per month",
       description: "For serious plant lovers who want it all",
       features: [
@@ -40,10 +40,10 @@ export function PricingPage() {
       comingSoon: false,
     },
     {
-      name: "Yearly",
-      price: "$24",
-      period: "per year",
-      description: "Best value — billed annually",
+      name: "Lifetime",
+      price: "$49.99",
+      period: "one-time",
+      description: "Pay once, use forever",
       features: [
         "Everything in Pro",
         "Unlimited plant scans",
@@ -51,9 +51,9 @@ export function PricingPage() {
         "Plant disease detection",
       ],
       notIncluded: [],
-      cta: "Coming Soon",
+      cta: "Get Lifetime",
       highlighted: false,
-      comingSoon: true,
+      comingSoon: false,
     },
   ];
 
@@ -61,7 +61,7 @@ export function PricingPage() {
     {
       question: "What does the Free plan include?",
       answer:
-        "The Free plan gives you 3 plant identifications per day with full plant ID information — no credit card required.",
+        "The Free plan gives you 5 plant identifications per day with full plant ID information — no credit card required.",
     },
     {
       question: "What payment methods do you accept?",
@@ -84,9 +84,9 @@ export function PricingPage() {
         "Your plant collection and data remain accessible even if you cancel Pro. You can always export your data.",
     },
     {
-      question: "When will the Yearly plan be available?",
+      question: "What is the Lifetime plan?",
       answer:
-        "The Yearly plan ($24/year) is coming soon. It includes everything in Pro — unlimited plant scans, care tips, and plant disease detection — at the best annual value.",
+        "The Lifetime plan ($49.99 one-time) gives you permanent access to everything in Pro — unlimited plant scans, care tips, and plant disease detection — with no recurring charges.",
     },
   ];
 
@@ -195,7 +195,7 @@ export function PricingPage() {
                     </span>
                   ) : (
                     <a
-                      href="https://play.google.com/store/apps/details?id=com.plantgenius"
+                      href="https://play.google.com/store/apps/details?id=com.plantgenius&hl=en"
                       className={`relative mt-8 inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-base font-semibold transition-all ${
                         plan.highlighted
                           ? "bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-brand hover:-translate-y-0.5 hover:shadow-float"
@@ -280,7 +280,7 @@ export function PricingPage() {
 
                 <div className="mt-10 flex justify-center">
                   <a
-                    href="https://play.google.com/store/apps/details?id=com.plantgenius"
+                    href="https://play.google.com/store/apps/details?id=com.plantgenius&hl=en"
                     className="group inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-base font-semibold text-brand-700 shadow-float transition-all hover:-translate-y-0.5 hover:bg-brand-50"
                     target="_blank"
                   >

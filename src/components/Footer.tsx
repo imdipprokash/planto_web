@@ -4,7 +4,7 @@ import { Facebook, Twitter, Instagram, Youtube, ArrowRight } from "lucide-react"
 import Link from "next/link";
 
 const APP_URL =
-  "https://play.google.com/store/apps/details?id=com.plantgenius";
+  "https://play.google.com/store/apps/details?id=com.plantgenius&hl=en";
 
 const COLUMNS = [
   {

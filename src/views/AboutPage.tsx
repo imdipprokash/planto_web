@@ -247,6 +247,33 @@ export function AboutPage() {
         </div>
       </section>
 
+      {/* Company Identity Section */}
+      <section className="relative py-24 md:py-32">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-white via-brand-50/40 to-white" />
+        <div className="container-page">
+          <Reveal className="mx-auto mb-16 max-w-2xl text-center">
+            <span className="inline-flex items-center rounded-full border border-brand-200 bg-brand-50 px-4 py-1.5 text-sm font-medium text-brand-700">
+              Contact & Info
+            </span>
+            <h2 className="mt-5 text-4xl sm:text-5xl">
+              Get in <span className="text-gradient">Touch</span>
+            </h2>
+          </Reveal>
+          <Reveal delay={90}>
+            <div className="mx-auto max-w-2xl rounded-3xl border border-border bg-card p-10 shadow-soft text-center space-y-4">
+              <p className="text-lg font-semibold text-foreground">Planto</p>
+              <p className="text-muted-foreground">AI-powered plant identification &amp; plant care</p>
+              <div className="pt-2 space-y-2 text-muted-foreground">
+                <p>Website: <a href="https://www.plantoapp.info" className="text-brand-700 underline underline-offset-2">plantoapp.info</a></p>
+                <p>Support: <a href="mailto:support@plantoapp.info" className="text-brand-700 underline underline-offset-2">support@plantoapp.info</a></p>
+                <p>Platform: Android / Google Play</p>
+                <p>Founded: 2023</p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="relative py-24 md:py-32">
         <div className="container-page">
@@ -264,7 +291,7 @@ export function AboutPage() {
                 </p>
                 <div className="mt-8 flex justify-center">
                   <a
-                    href="https://play.google.com/store/apps/details?id=com.plantgenius"
+                    href="https://play.google.com/store/apps/details?id=com.plantgenius&hl=en"
                     target="_blank"
                     className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-brand-700 shadow-float transition-all hover:-translate-y-0.5 hover:bg-brand-50"
                   >

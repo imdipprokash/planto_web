@@ -1,0 +1,752 @@
+I audited the publicly accessible pages of plantoapp.info against AWS's current 2026 Activate guidance. AWS says applicants need a fully functioning company website, accurate startup information, consistent business-domain information, and a linked AWS account; AWS also says it may use automated collection of publicly available website information when evaluating an application.
+
+My main finding: the site is functional, but there are several credibility/consistency issues I would fix before submitting another Activate application. The biggest one is not design—it is internal contradictions and claims that AWS could potentially verify against your app/account.
+
+Overall audit
+Page	Current assessment	Priority
+Home	Good structure, but too many unverifiable/contradictory claims	🔴 High
+Features	Good, but claims need evidence/consistency	🔴 High
+How It Works	Good concept, contradictory accuracy/usage claims	🔴 High
+Pricing	Major inconsistencies with FAQ/Terms	🔴 High
+Blog	Looks like a real content section, but dated/static	🟡 Medium
+FAQ	Several contradictions with Pricing	🔴 Critical
+About	Good foundation, but company identity is incomplete	🔴 Critical
+Careers	Looks potentially placeholder-like	🟡 Medium
+Contact	Good business-domain email; needs company identity/contact details	🟠 High
+Privacy	Good start, but should be aligned with actual implementation	🟠 High
+Terms	Needs updating and company/legal identity	🟠 High
+Cookie Policy	Potentially inaccurate for a website/mobile app	🟡 Medium
+Licenses	Good transparency; verify PlantNet attribution	🟢
+Google Play link	Important verification point	🔴 Critical
+1. Homepage — 🔴 HIGH PRIORITY
+
+Open Planto homepage
+
+The homepage is reasonably structured and clearly explains what Planto does. It has navigation to Features, How It Works, Pricing, Blog, FAQ, About, Careers, Contact, Privacy, Terms, Cookie Policy and Licenses.
+
+That's good for AWS because a reviewer can understand the product without having to guess what the startup does.
+
+The problem: too many claims
+
+The homepage currently says:
+
+2,999+ monthly users
+500+ plants identified
+99% accuracy
+500+ daily identifications
+4.8 average rating
+50+ countries
+10,000+ species
+millions of training images
+results under 2 seconds
+
+These appear directly on the public homepage.
+
+The 99% accuracy claim is especially problematic because your Features and FAQ pages say 95% accuracy, not 99%.
+
+Change this
+
+Do not try to make the numbers look impressive for AWS.
+
+Make them accurate and internally consistent.
+
+For example, if your real measured accuracy is 95%, use:
+
+95% identification accuracy across our tested plant dataset
+
+rather than:
+
+99% accuracy
+
+And only publish the 2,999-user, 500-identification, 4.8-rating and 50-country numbers if you can actually substantiate them.
+
+Testimonials
+
+The homepage contains testimonials attributed to:
+
+Sarah Johnson — Home Gardener
+Michael Chen — Landscape Designer
+Emma Davis — Plant Enthusiast.
+
+If these are real customers, fine.
+
+If these are sample/generated testimonials, remove them before applying.
+
+A public reviewer seeing generic-looking names and highly polished testimonials that cannot be verified could create an unnecessary credibility question.
+
+Recommended homepage changes
+
+Keep:
+
+Product explanation
+Screenshots
+Features
+How it works
+Google Play CTA
+Legal links
+
+Fix:
+
+99% → actual verified accuracy
+Make all user/usage statistics accurate
+Remove fake/sample testimonials
+Add company/business identity
+Add support@plantoapp.info
+Consider adding a simple "About the company" section
+2. Features — 🔴 HIGH PRIORITY
+
+Open Features page
+
+This page says Planto can:
+
+identify 10,000+ species
+achieve 95% accuracy
+work offline
+provide care guides
+provide reminders
+detect disease/pests
+provide treatment recommendations
+monitor plant health.
+Main issue
+
+The claims need to correspond to what the actual Android app currently does.
+
+For example:
+
+"Works offline after initial download"
+
+and
+
+"Disease Detection"
+
+are fairly substantial product claims.
+
+If those functions actually work in the current production app, keep them.
+
+If they're planned features, change the wording to:
+
+Coming soon
+
+or remove them.
+
+More important: accuracy contradiction
+
+Here:
+
+95% accuracy
+
+But homepage:
+
+99% accuracy
+
+That's exactly the type of inconsistency I'd eliminate before reapplying.
+
+Recommended wording
+
+Use one documented number everywhere, or avoid a numerical accuracy claim entirely.
+
+For example:
+
+AI-powered plant identification
+Identify plants from photos and receive species suggestions with confidence information.
+
+That is safer if you don't have a formal accuracy benchmark.
+
+3. How It Works — 🔴 HIGH PRIORITY
+
+Open How It Works
+
+This page is actually useful because it demonstrates the product workflow:
+
+Photo → AI Identification → Plant Information → Reminders.
+
+That's exactly the sort of thing I'd want a reviewer to understand.
+
+But again: accuracy
+
+It says:
+
+"Our AI has a 95% accuracy rate across 10,000+ plant species."
+
+That's inconsistent with the homepage's 99%.
+
+Also check the "2–5 seconds" claim
+
+The page says analysis takes 2–5 seconds.
+
+If your real application sometimes takes 10–20 seconds, don't advertise 2–5 seconds.
+
+AWS isn't necessarily testing that number specifically, but you want the website to represent the actual product.
+
+4. Pricing — 🔴 CRITICAL
+
+Open Pricing page
+
+This is one of the pages I would definitely fix before reapplying.
+
+The Pricing page says:
+
+Free
+$0
+3 plant identifications/day
+plant ID information
+unlimited plant scans
+care tips
+disease detection.
+
+Notice the contradiction:
+
+"3 plant identifications per day"
+but immediately below:
+
+"Unlimited plant scans."
+
+That's confusing.
+
+Pro
+
+It says:
+
+$2.49/month
+
+and unlimited plant scans.
+
+Yearly
+
+$24/year and "Coming Soon."
+
+FAQ says something completely different
+
+Your FAQ says:
+
+Free users: 5 plants/day
+
+and:
+
+Premium: $4.99/month or $49.99 lifetime.
+
+That's a major contradiction.
+
+Your public website currently gives AWS—or any visitor—two different pricing models.
+
+Fix immediately
+
+Choose the actual pricing in your live Google Play application.
+
+Then make:
+
+Pricing page = Google Play pricing = FAQ = Terms
+
+exactly consistent.
+
+If the actual product is:
+
+Free: 5 identifications/day
+Premium: $4.99/month
+
+then put that everywhere.
+
+Don't leave old prices on another page.
+
+5. Blog — 🟡 MEDIUM
+
+Open Planto Blog
+
+The blog contains several articles dated October–November 2024.
+
+This isn't inherently a problem for AWS.
+
+But if you are presenting Planto as an actively growing startup in 2026, an apparently abandoned blog from 2024 can make the site look less active.
+
+Two options
+
+Option A — maintain it
+
+Publish a few genuinely useful 2026 articles.
+
+Option B — simplify it
+
+Remove the Blog navigation until you have actual ongoing content.
+
+I would personally prefer a smaller site with real content over a large site containing sections that look unfinished.
+
+Also verify that the "Read More" buttons actually open individual articles rather than simply returning to /blog.
+
+6. FAQ — 🔴 CRITICAL
+
+Open FAQ
+
+This is probably the page I would fix first.
+
+The FAQ currently says:
+
+95% accuracy
+
+10,000+ species
+
+5 plants/day
+
+Premium $4.99/month or $49.99 lifetime
+
+7-day trial
+
+30-day money-back guarantee
+
+Premium disease detection
+
+PDF/CSV/JSON export
+
+etc.
+
+Some of those claims conflict with the Pricing page.
+
+Specifically:
+
+FAQ:
+
+5 identifications/day
+
+Pricing:
+
+3 identifications/day
+
+FAQ:
+
+$4.99/month
+
+Pricing:
+
+$2.49/month
+
+FAQ:
+
+$49.99 lifetime
+
+Pricing:
+
+$24/year
+
+FAQ:
+
+7-day free trial
+
+Pricing:
+
+7-day trial listed as "Coming Soon."
+
+These contradictions should be eliminated.
+
+My recommendation
+
+Create a single source of truth for product/pricing data and use that data everywhere on the website.
+
+7. About — 🔴 CRITICAL
+
+Open About page
+
+This is the biggest company identity opportunity.
+
+The page explains the Planto story and gives milestones, which is good. It says Planto began in 2023, launched on Google Play in 2024, and reached stated user/identification milestones.
+
+But the company identity is vague.
+
+It says:
+
+"Founder & Developer"
+
+"AI & Machine Learning"
+
+"Community Manager"
+
+"Content Creator"
+
+but doesn't actually identify the people or the legal entity behind Planto.
+
+I would add
+About Planto
+
+Planto is a [legal entity/company name] building AI-powered
+plant identification and plant-care tools.
+
+Website:
+https://www.plantoapp.info
+
+Business email:
+support@plantoapp.info
+
+Founded:
+2023
+
+Based in:
+[actual country/city, if you publicly represent this]
+
+Founder:
+[real founder name]
+
+Google Play:
+[real app listing]
+
+Only include information that is true.
+
+Important
+
+Your AWS application should use the same:
+
+Startup name + website domain + business email + company information
+
+AWS's June 2026 guidance specifically says the business email used for the Activate profile/application should match the startup's domain and that startup information should be accurate.
+
+8. Careers — 🟡 MEDIUM
+
+Open Careers page
+
+This page currently lists:
+
+Full Stack Developer
+Machine Learning Engineer
+Community Manager
+Botanist / Content Creator.
+
+But every position directs applicants to the same support@plantoapp.info address.
+
+If these are genuine open positions, keep them.
+
+If they're merely there to make the company look larger, remove them.
+
+The same applies to the About page's multiple team roles.
+
+A small startup saying:
+
+"We're a small team"
+
+and then listing four functional departments isn't automatically a problem, but the information should accurately describe the real organization.
+
+9. Contact — 🟠 HIGH PRIORITY
+
+Open Contact page
+
+This is actually one of the stronger pages.
+
+It has:
+
+support@plantoapp.info
+response-time information
+contact form
+FAQ link
+community forum.
+What is missing
+
+The location currently says:
+
+Remote - Serving customers worldwide
+
+For AWS application consistency, I'd make the business identity clearer.
+
+For example:
+
+Planto
+AI-powered plant identification and care
+
+Website: plantoapp.info
+Email: support@plantoapp.info
+
+[Legal company/entity name]
+[Business address, if applicable]
+
+Don't invent an address just for AWS.
+
+10. Privacy Policy — 🟠 HIGH PRIORITY
+
+Open Privacy Policy
+
+This page is much better than many startup websites.
+
+It explains:
+
+Google authentication
+email/name/profile picture
+camera/photos
+approximate location
+encryption
+AdMob
+data sharing
+account deletion
+support contact.
+But verify every statement against your actual app
+
+For example:
+
+"Photos are processed solely for species identification."
+
+and
+
+"Your account info is stored with AES-256 encryption at rest."
+
+and:
+
+"We implement industry-standard SSL/TLS encryption."
+
+These should accurately describe your actual architecture.
+
+One thing I'd add
+
+Identify the actual legal/business operator:
+
+Data Controller / Company: [legal entity name]
+
+and a business contact address where appropriate.
+
+Also make sure the privacy policy's description of Google Sign-In, Firebase, AdMob, location, photo processing, analytics, and deletion matches what your Android app actually requests and uses.
+
+11. Terms of Service — 🟠 HIGH PRIORITY
+
+Open Terms of Service
+
+The Terms are reasonably comprehensive. They cover accounts, subscriptions, user content, IP, liability, third-party services and contact information.
+
+But they're outdated relative to your current site
+
+The Terms say:
+
+Last updated: November 21, 2024
+
+while your Privacy Policy was updated February 28, 2026.
+
+More importantly, the Terms say:
+
+Premium subscriptions are billed monthly or as a one-time lifetime payment
+
+while your Pricing page currently describes monthly + annual pricing.
+
+That's another consistency problem.
+
+Fix
+
+Update Terms to match your actual Google Play product configuration.
+
+Also replace the generic:
+
+"jurisdiction in which we operate"
+
+with the actual governing jurisdiction if appropriate for your legal setup.
+
+12. Cookie Policy — 🟡 MEDIUM
+
+Open Cookie Policy
+
+This is comprehensive, but there's a potential conceptual problem.
+
+The policy describes cookies used by:
+
+the app
+website
+Google Analytics
+Firebase
+advertising networks
+payment processors.
+
+Make sure this actually corresponds to your website implementation.
+
+For example, if your website doesn't use Google Analytics cookies, don't claim that it does.
+
+Likewise, if certain controls only exist inside the mobile app, distinguish:
+
+Website technologies
+
+from
+
+Mobile app technologies.
+
+This will make the policy much more credible.
+
+13. Licenses — 🟢 GOOD, BUT VERIFY
+
+Open Licenses page
+
+This is actually a nice transparency page.
+
+It lists React, Tailwind, Lucide, TensorFlow Lite, Firebase, React Navigation and Axios, along with image attributions.
+
+It also says PlantNet images were used in the training dataset under CC BY-SA 4.0.
+
+Important
+
+Make absolutely certain your actual training/data pipeline is consistent with that attribution and license.
+
+Don't change this merely for AWS; fix it only if the underlying information isn't accurate.
+
+14. Google Play listing — 🔴 CRITICAL
+
+Your website repeatedly links to Google Play.
+
+This is important because AWS doesn't just see your marketing site.
+
+A reviewer can follow the app link.
+
+Therefore:
+
+Website
+Planto
+Google Play
+
+Should say:
+
+Planto
+AWS Activate
+
+Should say:
+
+Planto
+AWS account
+
+Should use your business-domain email.
+
+Domain
+plantoapp.info
+Support
+support@plantoapp.info
+
+The more consistently these match, the easier it is for a reviewer to understand that these are all the same startup.
+
+AWS's current application guidance explicitly emphasizes consistent domain information and linking the startup's primary AWS account.
+
+The biggest issue I found
+
+It's not that your website is empty.
+
+It's actually the opposite.
+
+You have enough content.
+
+The problem is that the content currently tells slightly different stories.
+
+For example:
+
+HOME
+99% accuracy
+500+ daily identifications
+
+FEATURES
+95% accuracy
+
+HOW IT WORKS
+95% accuracy
+
+FAQ
+5 identifications/day
+$4.99/month
+$49.99 lifetime
+
+PRICING
+3 identifications/day
+$2.49/month
+$24/year
+
+Those contradictions are much more important to fix than changing colors, logos, animations, or layout.
+
+What I would change before the next AWS application
+🔴 Must fix
+
+1. Pricing consistency
+
+Make Pricing, FAQ, Terms and actual Google Play pricing identical.
+
+2. Accuracy consistency
+
+Choose the real number—or remove the percentage.
+
+3. Usage metrics
+
+Verify 2,999 users, 500+ identifications, 4.8 rating, 50+ countries, etc.
+
+4. Testimonials
+
+Only keep real, authorized testimonials.
+
+5. Company identity
+
+Clearly identify the company/legal entity behind Planto.
+
+6. Business email
+
+Use a genuine @plantoapp.info email consistently.
+
+7. AWS account
+
+AWS's current instructions say the AWS account contact information should use the business email when linking the startup account.
+
+8. Google Play
+
+Make sure the live app matches the website's claims.
+
+🟠 Strongly recommended
+
+Add a clear section on About:
+
+About the Company
+
+Planto is an AI-powered plant identification and plant-care application developed by [legal entity/company name]. Our mission is to make plant identification and care accessible through mobile technology and AI.
+
+Then:
+
+Website: plantoapp.info
+Support: support@plantoapp.info
+Platform: Android / Google Play
+Founded: [actual year]
+Company: [actual legal entity]
+
+This gives AWS a very clean identity trail.
+
+🟢 What I would NOT change
+
+You do not need to redesign the whole site just for AWS.
+
+The existing navigation is good, and the site has the major pages AWS would expect to see: product information, company information, contact, privacy, terms and supporting information.
+
+AWS's current Activate requirements specifically call for a fully functioning company website rather than a particular visual design.
+
+My proposed AWS-ready structure
+
+I'd make the website's public identity essentially this:
+
+PLANTO
+AI-powered plant identification & plant care
+
+Website:
+https://www.plantoapp.info
+
+Business:
+[LEGAL COMPANY NAME]
+
+Business email:
+support@plantoapp.info
+
+Product:
+Planto Android App
+
+Google Play:
+[REAL PLAY STORE LISTING]
+
+Founded:
+[REAL YEAR]
+
+Founder:
+[REAL NAME]
+
+Users:
+[VERIFIED NUMBER]
+
+Plant species:
+[VERIFIED NUMBER]
+
+Identification accuracy:
+[VERIFIED METRIC]
+
+Contact:
+support@plantoapp.info
+
+And then make every page use the same facts.
+
+One more important AWS point
+
+AWS's current Activate Terms say that when you provide your website URL, AWS authorizes itself to use automated means to collect publicly available information from the website to evaluate the credit application.

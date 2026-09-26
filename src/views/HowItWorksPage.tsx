@@ -66,7 +66,7 @@ export function HowItWorksPage() {
     },
     {
       question: "How many plants can I identify?",
-      answer: "Unlimited! You can identify as many plants as you want with no restrictions."
+      answer: "Free users can identify up to 5 plants per day. Premium users enjoy unlimited identifications with no restrictions."
     },
     {
       question: "What if the identification is wrong?",
@@ -199,7 +199,7 @@ export function HowItWorksPage() {
 
                 <div className="mt-10 flex justify-center">
                   <a
-                    href="https://play.google.com/store/apps/details?id=com.plantgenius"
+                    href="https://play.google.com/store/apps/details?id=com.plantgenius&hl=en"
                     className="group inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-base font-semibold text-brand-700 shadow-float transition-all hover:-translate-y-0.5 hover:bg-brand-50"
                     target="_blank"
                   >

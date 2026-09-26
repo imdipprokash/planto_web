@@ -243,7 +243,7 @@ export function FAQPage() {
                     Contact Support
                   </a>
                   <a
-                    href="https://play.google.com/store/apps/details?id=com.plantgenius"
+                    href="https://play.google.com/store/apps/details?id=com.plantgenius&hl=en"
                     className="group inline-flex items-center justify-center gap-3 rounded-full border border-white/40 bg-white/10 px-8 py-4 text-base font-semibold text-white backdrop-blur transition-all hover:-translate-y-0.5 hover:bg-white/20"
                     target="_blank"
                   >

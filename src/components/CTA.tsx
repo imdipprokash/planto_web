@@ -5,7 +5,7 @@ import { Reveal } from "./Reveal";
 import { Star, Play, Download } from "lucide-react";
 
 const APP_URL =
-  "https://play.google.com/store/apps/details?id=com.plantgenius";
+  "https://play.google.com/store/apps/details?id=com.plantgenius&hl=en";
 
 export function CTA() {
   return (

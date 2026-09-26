@@ -151,7 +151,7 @@ export function FeaturesPage() {
 
                 <div className="mt-10 flex justify-center">
                   <a
-                    href="https://play.google.com/store/apps/details?id=com.plantgenius"
+                    href="https://play.google.com/store/apps/details?id=com.plantgenius&hl=en"
                     className="group inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-base font-semibold text-brand-700 shadow-float transition-all hover:-translate-y-0.5 hover:bg-brand-50"
                     target="_blank"
                   >

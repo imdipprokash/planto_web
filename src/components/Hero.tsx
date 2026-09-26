@@ -5,12 +5,12 @@ import { Reveal } from "./Reveal";
 import { Sparkles, Camera, Leaf, ArrowRight, Star } from "lucide-react";
 
 const APP_URL =
-  "https://play.google.com/store/apps/details?id=com.plantgenius";
+  "https://play.google.com/store/apps/details?id=com.plantgenius&hl=en";
 
 const STATS = [
   { value: "2999+", label: "Monthly Users" },
   { value: "500+", label: "Plants Identified" },
-  { value: "99%", label: "Accuracy" },
+  { value: "95%", label: "Accuracy" },
 ];
 
 export function Hero() {
@@ -122,7 +122,7 @@ export function Hero() {
                 </div>
                 <div>
                   <div className="flex items-center gap-1 text-sm font-semibold text-foreground">
-                    99% match <Star className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />
+                    95% match <Star className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />
                   </div>
                   <div className="text-xs text-muted-foreground">
                     Identified in 1.2s

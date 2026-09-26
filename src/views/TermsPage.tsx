@@ -18,7 +18,7 @@ export function TermsPage() {
             </span>
             <h1 className="mt-5 text-4xl sm:text-5xl">Terms of Service</h1>
             <p className="mt-4 text-muted-foreground">
-              Last updated: November 21, 2024
+              Last updated: September 26, 2026
             </p>
           </Reveal>
         </div>
@@ -79,8 +79,8 @@ export function TermsPage() {
               <h3>Premium Subscriptions</h3>
               <ul>
                 <li>
-                  Premium subscriptions are billed monthly or as a one-time
-                  lifetime payment
+                  Premium subscriptions are available as a monthly plan
+                  ($4.99/month) or a one-time lifetime purchase ($49.99)
                 </li>
                 <li>
                   Subscriptions automatically renew unless canceled before the
