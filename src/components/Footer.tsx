@@ -53,7 +53,7 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-2.5">
               <span className="flex h-10 w-10 items-center justify-center overflow-hidden">
                 <img
-                  src="https://play-lh.googleusercontent.com/8Fpxd6sLTWy6saCYZXR-Hyl0I6t6gy6drPktH9n8tSIO1QP4PIW7Ji4QKqOg8vBF4jA=w480-h960-rw"
+                  src="/logo.svg"
                   alt="Planto"
                   className="h-10 w-10 squircle object-contain"
                 />

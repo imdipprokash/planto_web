@@ -99,6 +99,7 @@ export function Hero() {
                   src="https://images.unsplash.com/photo-1690553562074-210d110466d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwbGFudCUyMGlkZW50aWZpY2F0aW9uJTIwcGhvbmV8ZW58MXx8fHwxNzYzNzIxMDQ3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                   alt="Plant Identification App"
                   className="h-auto w-full"
+                  loading="eager"
                 />
               </div>
 
