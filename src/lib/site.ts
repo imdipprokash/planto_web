@@ -18,9 +18,9 @@ export const ROUTES: { path: string; title: string; description: string }[] = [
   },
   {
     path: "/pricing",
-    title: "Pricing: Planto Plant Identification App",
+    title: "Pricing: Free, Pro ($4.99/mo) & Lifetime Plans",
     description:
-      "See Planto pricing and plans for unlimited plant identification, disease detection and personalized care guidance. Compare options and pick yours.",
+      "Start free with 5 plant identifications a day, or go Pro for $4.99/month or Lifetime for $49.99 to unlock unlimited scans, care tips and disease detection.",
   },
   {
     path: "/faq",

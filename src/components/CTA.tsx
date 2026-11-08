@@ -55,7 +55,7 @@ export function CTA() {
               <div className="relative hidden h-full min-h-80 lg:block">
                 <div className="absolute inset-0 bg-gradient-to-l from-transparent to-brand-700/40" />
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1679326641325-88ad342065ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxib3RhbmljYWwlMjBnYXJkZW4lMjBwbGFudHN8ZW58MXx8fHwxNzYzNjY5MTU5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src="/images/cta-plants.jpg"
                   alt="Botanical garden"
                   className="h-full w-full object-cover"
                 />

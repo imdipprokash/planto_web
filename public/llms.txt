@@ -1,0 +1,19 @@
+# Planto
+
+> Planto is a plant identification and care app. Snap a photo of a plant to identify it, detect plant diseases and pests, and get care guides and reminders.
+
+Website: https://www.growplanto.com
+App: https://play.google.com/store/apps/details?id=com.plantgenius
+
+## Key pages
+- [Features](https://www.growplanto.com/features): Plant identification, care guides, smart reminders, disease detection, health monitoring and community support.
+- [How it works](https://www.growplanto.com/how-it-works): Identify a plant in three steps.
+- [Pricing](https://www.growplanto.com/pricing): Free plan (5 identifications per day), Pro ($4.99/month) and Lifetime ($49.99 one-time).
+- [FAQ](https://www.growplanto.com/faq): Common questions about the app.
+- [About](https://www.growplanto.com/about): The team and mission behind Planto.
+- [Contact](https://www.growplanto.com/contact): Support and feedback.
+
+## Legal
+- [Privacy Policy](https://www.growplanto.com/privacy)
+- [Terms of Service](https://www.growplanto.com/terms)
+- [Cookie Policy](https://www.growplanto.com/cookies)
