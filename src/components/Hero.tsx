@@ -96,7 +96,7 @@ export function Hero() {
               <div className="absolute inset-0 -z-10 translate-x-6 translate-y-6 rotate-3 rounded-[2rem] bg-brand-200/60" />
               <div className="overflow-hidden rounded-[2rem] border border-white/60 bg-white shadow-float">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1690553562074-210d110466d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwbGFudCUyMGlkZW50aWZpY2F0aW9uJTIwcGhvbmV8ZW58MXx8fHwxNzYzNzIxMDQ3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src="/images/hero-plant-id.jpg"
                   alt="Plant Identification App"
                   className="h-auto w-full"
                   loading="eager"

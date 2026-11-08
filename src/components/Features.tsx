@@ -82,7 +82,7 @@ export function Features() {
               <div className="relative">
                 <div className="absolute -inset-4 -z-10 rounded-3xl bg-white/20 blur-xl" />
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1650731900879-b5f25088ff31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmVlbiUyMGxlYXZlcyUyMG5hdHVyZXxlbnwxfHx8fDE3NjM3MTM4MzB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src="/images/features-ai.jpg"
                   alt="Plant leaves"
                   className="h-auto w-full rounded-3xl shadow-float"
                 />

@@ -56,6 +56,11 @@ const jsonLd = {
         "Plant identification and care app: identify plants from a photo, detect plant diseases and get care reminders.",
       url: SITE_URL,
       downloadUrl: PLAY_STORE_URL,
+      offers: [
+        { "@type": "Offer", name: "Free", price: "0", priceCurrency: "USD" },
+        { "@type": "Offer", name: "Pro (monthly)", price: "4.99", priceCurrency: "USD" },
+        { "@type": "Offer", name: "Lifetime", price: "49.99", priceCurrency: "USD" },
+      ],
       publisher: { "@id": `${SITE_URL}/#organization` },
     },
   ],

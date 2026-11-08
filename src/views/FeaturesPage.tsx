@@ -103,6 +103,14 @@ export function FeaturesPage() {
       <section className="relative py-24 md:py-32">
         <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-white via-brand-50/40 to-white" />
         <div className="container-page">
+          <Reveal className="mx-auto mb-14 max-w-3xl text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl">
+              Everything You Need to Identify and Care for Your Plants
+            </h2>
+            <p className="mt-5 text-lg text-muted-foreground">
+              From instant plant identification to disease detection and smart care reminders, here is what Planto does.
+            </p>
+          </Reveal>
           <div className="grid gap-6 md:grid-cols-2">
             {allFeatures.map((feature, index) => (
               <Reveal key={index} delay={(index % 2) * 90}>
