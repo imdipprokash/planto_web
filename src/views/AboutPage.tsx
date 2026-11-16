@@ -265,7 +265,7 @@ export function AboutPage() {
               <p className="text-muted-foreground">AI-powered plant identification &amp; plant care</p>
               <div className="pt-2 space-y-2 text-muted-foreground">
                 <p>Website: <a href="https://www.plantoapp.info" className="text-brand-700 underline underline-offset-2">plantoapp.info</a></p>
-                <p>Support: <a href="mailto:support@plantoapp.info" className="text-brand-700 underline underline-offset-2">support@plantoapp.info</a></p>
+                <p>Support: <a href="mailto:support@growplanto.com" className="text-brand-700 underline underline-offset-2">support@growplanto.com</a></p>
                 <p>Platform: Android / Google Play</p>
                 <p>Founded: 2023</p>
               </div>

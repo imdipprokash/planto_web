@@ -22,33 +22,6 @@ export function CareersPage() {
     }
   ];
 
-  const positions = [
-    {
-      title: "Full Stack Developer",
-      type: "Full-time",
-      location: "Remote",
-      description: "Help us build and scale Planto's core platform. Experience with React, Node.js, and cloud infrastructure required."
-    },
-    {
-      title: "Machine Learning Engineer",
-      type: "Full-time",
-      location: "Remote",
-      description: "Improve our plant identification AI. Experience with TensorFlow, computer vision, and model optimization needed."
-    },
-    {
-      title: "Community Manager",
-      type: "Part-time",
-      location: "Remote",
-      description: "Build and nurture our growing community. Passion for plants and social media experience required."
-    },
-    {
-      title: "Botanist / Content Creator",
-      type: "Contract",
-      location: "Remote",
-      description: "Create accurate, engaging plant care content. Botany degree or equivalent experience required."
-    }
-  ];
-
   const benefits = [
     {
       icon: Globe,
@@ -165,54 +138,6 @@ export function CareersPage() {
         </div>
       </section>
 
-      {/* Open Positions */}
-      <section className="relative py-24 md:py-32">
-        <div className="container-page">
-          <Reveal className="mx-auto mb-16 max-w-2xl text-center">
-            <span className="inline-flex items-center rounded-full border border-brand-200 bg-brand-50 px-4 py-1.5 text-sm font-medium text-brand-700">
-              Open Roles
-            </span>
-            <h2 className="mt-5 text-4xl sm:text-5xl">
-              Open <span className="text-gradient">Positions</span>
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Find the role where you can make the biggest impact.
-            </p>
-          </Reveal>
-          <div className="mx-auto max-w-4xl space-y-6">
-            {positions.map((position, index) => (
-              <Reveal key={index} delay={(index % 2) * 90}>
-                <div className="group rounded-3xl border border-border bg-card p-8 shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-200 hover:shadow-card">
-                  <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
-                    <div>
-                      <h3 className="mb-3 text-xl">{position.title}</h3>
-                      <div className="flex flex-wrap gap-3">
-                        <span className="inline-flex items-center rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-sm font-medium text-brand-700">
-                          {position.type}
-                        </span>
-                        <span className="inline-flex items-center rounded-full border border-border bg-secondary px-3 py-1 text-sm font-medium text-secondary-foreground">
-                          {position.location}
-                        </span>
-                      </div>
-                    </div>
-                    <a
-                      href={`mailto:support@plantoapp.info?subject=Application for ${position.title}`}
-                      className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-gradient-to-r from-brand-600 to-brand-500 px-6 py-3 text-base font-semibold text-white shadow-brand transition-all hover:-translate-y-0.5 hover:shadow-float"
-                    >
-                      Apply Now
-                      <ArrowRight className="h-4 w-4" />
-                    </a>
-                  </div>
-                  <p className="mt-5 border-t border-border pt-5 text-muted-foreground">
-                    {position.description}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="relative py-24 md:py-32">
         <div className="container-page">
@@ -233,7 +158,7 @@ export function CareersPage() {
                 </p>
                 <div className="mt-8 flex justify-center">
                   <a
-                    href="mailto:support@plantoapp.info"
+                    href="mailto:support@growplanto.com"
                     className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-brand-700 shadow-float transition-all hover:-translate-y-0.5 hover:bg-brand-50"
                   >
                     Get in Touch

@@ -109,7 +109,7 @@ export function FAQPage() {
         },
         {
           question: "How do I contact support?",
-          answer: "You can reach us through the app (Settings > Help & Support), email us at support@plantoapp.info, or visit our community forum where experts and other users can help."
+          answer: "You can reach us through the app (Settings > Help & Support), email us at support@growplanto.com, or visit our community forum where experts and other users can help."
         }
       ]
     }

@@ -91,7 +91,7 @@ Fix:
 Make all user/usage statistics accurate
 Remove fake/sample testimonials
 Add company/business identity
-Add support@plantoapp.info
+Add support@growplanto.com
 Consider adding a simple "About the company" section
 2. Features — 🔴 HIGH PRIORITY
 
@@ -372,7 +372,7 @@ Website:
 https://www.plantoapp.info
 
 Business email:
-support@plantoapp.info
+support@growplanto.com
 
 Founded:
 2023
@@ -407,7 +407,7 @@ Machine Learning Engineer
 Community Manager
 Botanist / Content Creator.
 
-But every position directs applicants to the same support@plantoapp.info address.
+But every position directs applicants to the same support@growplanto.com address.
 
 If these are genuine open positions, keep them.
 
@@ -429,7 +429,7 @@ This is actually one of the stronger pages.
 
 It has:
 
-support@plantoapp.info
+support@growplanto.com
 response-time information
 contact form
 FAQ link
@@ -448,7 +448,7 @@ Planto
 AI-powered plant identification and care
 
 Website: plantoapp.info
-Email: support@plantoapp.info
+Email: support@growplanto.com
 
 [Legal company/entity name]
 [Business address, if applicable]
@@ -604,7 +604,7 @@ Should use your business-domain email.
 Domain
 plantoapp.info
 Support
-support@plantoapp.info
+support@growplanto.com
 
 The more consistently these match, the easier it is for a reviewer to understand that these are all the same startup.
 
@@ -690,7 +690,7 @@ Planto is an AI-powered plant identification and plant-care application develope
 Then:
 
 Website: plantoapp.info
-Support: support@plantoapp.info
+Support: support@growplanto.com
 Platform: Android / Google Play
 Founded: [actual year]
 Company: [actual legal entity]
@@ -719,7 +719,7 @@ Business:
 [LEGAL COMPANY NAME]
 
 Business email:
-support@plantoapp.info
+support@growplanto.com
 
 Product:
 Planto Android App
@@ -743,7 +743,7 @@ Identification accuracy:
 [VERIFIED METRIC]
 
 Contact:
-support@plantoapp.info
+support@growplanto.com
 
 And then make every page use the same facts.
 

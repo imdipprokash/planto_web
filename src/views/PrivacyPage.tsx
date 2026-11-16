@@ -16,7 +16,7 @@ import {
 
 export default function PrivacyPage() {
   const lastUpdated = "February 28, 2026";
-  const supportEmail = "support@plantoapp.info";
+  const supportEmail = "support@growplanto.com";
 
   return (
     <div className="min-h-screen">

@@ -9,8 +9,8 @@ export function ContactPage() {
       icon: Mail,
       title: "Email Us",
       description: "Get a response within 24 hours",
-      contact: "support@plantoapp.info",
-      action: "mailto:support@plantoapp.info"
+      contact: "support@growplanto.com",
+      action: "mailto:support@growplanto.com"
     },
     {
       icon: MessageSquare,
@@ -116,7 +116,7 @@ export function ContactPage() {
                     </div>
                     <div>
                       <h4 className="mb-1 text-base font-semibold text-foreground">Email</h4>
-                      <p className="text-muted-foreground">support@plantoapp.info</p>
+                      <p className="text-muted-foreground">support@growplanto.com</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
