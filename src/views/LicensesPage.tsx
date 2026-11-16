@@ -258,7 +258,7 @@ export function LicensesPage() {
             </p>
             <p className="text-foreground/80 leading-relaxed">
               If you believe we've missed any attribution or have questions about our use of
-              open source software, please contact us at support@plantoapp.info
+              open source software, please contact us at support@growplanto.com
             </p>
           </div>
         </div>

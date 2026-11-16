@@ -238,7 +238,7 @@ export function TermsPage() {
               <h2>Contact Information</h2>
               <p>If you have questions about these Terms, please contact us:</p>
               <ul className="!list-none !pl-0 mt-4">
-                <li>Support: support@plantoapp.info</li>
+                <li>Support: support@growplanto.com</li>
               </ul>
             </div>
           </div>
